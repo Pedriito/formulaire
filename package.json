@@ -1,0 +1,6 @@
+{
+    "name": "formulaire-site-web",
+    "version": "1.0.0",
+    "description": "Formulaire pour collecter des données client",
+    "main": "index.html"
+  }
