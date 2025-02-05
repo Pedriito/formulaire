@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Profilage Client - Site Web de Vente de Formations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulaire de Profilage Client - Site Web de Vente de Formations</h1>
+
+    <form action="submit_form.php" method="POST">
+
+        <!-- SECTION 1 : Informations Générales -->
+        <h2>1. Informations Générales</h2>
+        <label for="nom">Nom complet :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="entreprise">Entreprise / Nom de marque :</label>
+        <input type="text" id="entreprise" name="entreprise">
+
+        <label for="site_web">Site web actuel (s'il existe) :</label>
+        <input type="text" id="site_web" name="site_web">
+
+        <label for="objectif">Objectif principal du site :</label>
+        <textarea id="objectif" name="objectif" rows="3"></textarea>
+
+        <!-- SECTION 2 : Description de la Personnalité et du Style -->
+        <h2>2. Description de la Personnalité et du Style</h2>
+        <label for="personnalite">Décrivez votre personnalité en quelques mots :</label>
+        <textarea id="personnalite" name="personnalite" rows="3"></textarea>
+
+        <label for="image">Quelle image souhaitez-vous transmettre à vos clients ?</label>
+        <textarea id="image" name="image" rows="3"></textarea>
+
+        <label for="inspiration">Avez-vous une inspiration ou un style que vous aimez particulièrement ?</label>
+        <textarea id="inspiration" name="inspiration" rows="3"></textarea>
+
+        <!-- SECTION 3 : Préférences Visuelles -->
+        <h2>3. Préférences Visuelles</h2>
+        <label>Couleurs :</label>
+        <label><input type="radio" name="palette" value="oui"> Oui, j'ai une palette définie.</label>
+        <label><input type="radio" name="palette" value="non"> Non, je n'ai pas de palette définie.</label>
+        <label for="couleurs_preferees">Si non, quelles sont vos couleurs préférées ou celles qui vous représentent
+            ?</label>
+        <input type="text" id="couleurs_preferees" name="couleurs_preferees">
+
+        <label for="couleurs_eviter">Y a-t-il des couleurs que vous souhaitez éviter absolument ?</label>
+        <input type="text" id="couleurs_eviter" name="couleurs_eviter">
+
+        <label>Typographie :</label>
+        <label><input type="radio" name="typographie" value="moderne"> Moderne</label>
+        <label><input type="radio" name="typographie" value="classique"> Classique</label>
+        <label><input type="radio" name="typographie" value="elegante"> Élégante</label>
+        <label><input type="radio" name="typographie" value="ludique"> Ludique</label>
+        <label><input type="radio" name="typographie" value="autre"> Autre :</label>
+        <input type="text" name="typographie_autre">
+
+        <label>Formes :</label>
+        <label><input type="radio" name="formes" value="arrondies"> Arrondies</label>
+        <label><input type="radio" name="formes" value="angulaires"> Angulaires</label>
+        <label><input type="radio" name="formes" value="mixtes"> Mixtes</label>
+        <label><input type="radio" name="formes" value="autre"> Autre :</label>
+        <input type="text" name="formes_autre">
+
+        <label>Design :</label>
+        <label><input type="radio" name="design" value="minimaliste"> Minimaliste</label>
+        <label><input type="radio" name="design" value="orne"> Orné</label>
+        <label><input type="radio" name="design" value="futuriste"> Futuriste</label>
+        <label><input type="radio" name="design" value="traditionnel"> Traditionnel</label>
+        <label><input type="radio" name="design" value="autre"> Autre :</label>
+        <input type="text" name="design_autre">
+
+        <!-- SECTION 4 : Contenu et Structure du Site -->
+        <h2>4. Contenu et Structure du Site</h2>
+        <label for="sections">Listez les sections principales que vous souhaitez sur votre site :</label>
+        <textarea id="sections" name="sections" rows="3"></textarea>
+
+        <label>Types de contenu :</label>
+        <label><input type="checkbox" name="contenu[]" value="videos"> Vidéos</label>
+        <label><input type="checkbox" name="contenu[]" value="textes"> Textes</label>
+        <label><input type="checkbox" name="contenu[]" value="images"> Images</label>
+        <label><input type="checkbox" name="contenu[]" value="infographies"> Infographies</label>
+        <label><input type="checkbox" name="contenu[]" value="animations"> Animations</label>
+        <label><input type="checkbox" name="contenu[]" value="autre"> Autre :</label>
+        <input type="text" name="contenu_autre">
+
+        <label>Fonctionnalités spécifiques :</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="inscription"> Inscription en ligne aux
+            formations</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="paiement"> Paiement en ligne</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="forum"> Forum ou espace communautaire</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="quiz"> Système de quiz/test</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="newsletter"> Newsletter</label>
+        <label><input type="checkbox" name="fonctionnalites[]" value="autre"> Autre :</label>
+        <input type="text" name="fonctionnalites_autre">
+
+        <!-- SECTION 5 : Public Cible -->
+        <h2>5. Public Cible</h2>
+        <label for="clients_ideaux">Qui sont vos clients idéaux ?</label>
+        <textarea id="clients_ideaux" name="clients_ideaux" rows="3"></textarea>
+
+        <label for="age_moyen">Quel est leur âge moyen ?</label>
+        <input type="text" id="age_moyen" name="age_moyen">
+
+        <label for="valeurs_priorites">Quelles sont leurs valeurs ou priorités ?</label>
+        <textarea id="valeurs_priorites" name="valeurs_priorites" rows="3"></textarea>
+
+        <label for="sentiment_visiteurs">Comment souhaitez-vous qu'ils se sentent en visitant votre site ?</label>
+        <textarea id="sentiment_visiteurs" name="sentiment_visiteurs" rows="3"></textarea>
+
+        <!-- SECTION 6 : Références et Inspiration -->
+        <h2>6. Références et Inspiration</h2>
+        <label for="sites_admires">Avez-vous des sites web que vous admirez ?</label>
+        <textarea id="sites_admires" name="sites_admires" rows="3"></textarea>
+
+        <label for="elements_reproduire">Y a-t-il des éléments spécifiques que vous souhaitez reproduire ou éviter
+            ?</label>
+        <textarea id="elements_reproduire" name="elements_reproduire" rows="3"></textarea>
+
+        <!-- SECTION 7 : Contraintes Techniques -->
+        <h2>7. Contraintes Techniques</h2>
+        <label for="contraintes_techniques">Avez-vous des contraintes techniques particulières ?</label>
+        <textarea id="contraintes_techniques" name="contraintes_techniques" rows="3"></textarea>
+
+        <label>Référencement SEO :</label>
+        <label><input type="radio" name="seo" value="oui"> Oui</label>
+        <label><input type="radio" name="seo" value="non"> Non</label>
+
+        <label>Version mobile responsive :</label>
+        <label><input type="radio" name="responsive" value="oui"> Oui</label>
+        <label><input type="radio" name="responsive" value="non"> Non</label>
+
+        <label for="date_limite">Quelle est la date limite pour la mise en ligne du site ?</label>
+        <input type="date" id="date_limite" name="date_limite">
+
+        <!-- SECTION 9 : Questions Guidantes pour le Design -->
+        <h2>9. Questions Guidantes pour le Design</h2>
+        <label for="site_personne">Si votre site était une personne, comment serait-elle habillée ?</label>
+        <textarea id="site_personne" name="site_personne" rows="3"></textarea>
+
+        <label for="emotion_principale">Quelle est l'émotion principale que vous souhaitez susciter chez vos visiteurs
+            ?</label>
+        <textarea id="emotion_principale" name="emotion_principale" rows="3"></textarea>
+
+        <label>Préférez-vous un design :</label>
+        <label><input type="radio" name="design_style" value="sobre"> Sobre</label>
+        <label><input type="radio" name="design_style" value="audacieux"> Audacieux</label>
+        <label><input type="radio" name="design_style" value="mixte"> Mixte</label>
+
+        <!-- SECTION 10 : Remarques Supplémentaires -->
+        <h2>10. Remarques Supplémentaires</h2>
+        <label for="remarques">Y a-t-il d'autres éléments ou informations que vous souhaitez partager ?</label>
+        <textarea id="remarques" name="remarques" rows="5"></textarea>
+
+        <!-- Bouton de soumission -->
+        <button type="submit">Soumettre</button>
+
+    </form>
+
+</body>
+
+</html>
