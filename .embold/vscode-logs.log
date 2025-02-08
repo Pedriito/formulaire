@@ -1,0 +1,16 @@
+2025-02-08 19:26:33 info: Congratulations, your extension "Embold" is now active!
+2025-02-08 19:26:33 info: tempDirectory : /Users/pedriito/.vscode/extensions/embold-vscode.embold-0.1.8/temp
+2025-02-08 19:26:34 error: SQLITE_ERROR: no such table: issues
+2025-02-08 19:26:35 info: Extraction complete for source: /Users/pedriito/.vscode/extensions/embold-vscode.embold-0.1.8/resources/embold-scanner-archive.zip, destination: /Users/pedriito/.vscode/extensions/embold-vscode.embold-0.1.8/temp
+2025-02-08 19:26:35 info: Extension installed on machine OS : darwin
+2025-02-08 19:26:35 info: Fetched the issues from DB
+2025-02-08 19:26:35 info: Java version installed on machine : 
+openjdk version "19.0.2" 2023-01-17
+OpenJDK Runtime Environment (build 19.0.2+7-44)
+OpenJDK 64-Bit Server VM (build 19.0.2+7-44, mixed mode, sharing)
+
+2025-02-08 19:26:35 info: Java installed on machine.
+2025-02-08 19:26:35 info: Embold extension version response:{"hasSupport":false,"version":"0.1.6","changeNotes":"<div> <p>Release Date: 09 Oct, 2023 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-02-08 19:26:35 info: Current installed embold extension version : 0.1.8
+2025-02-08 19:26:35 info: Latest embold extension version on marketplace : 0.1.6
+2025-02-08 21:37:34 info: Row(s) deleted
